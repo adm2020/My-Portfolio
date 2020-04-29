@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+<div class="bg">
+
+	<div class="nav">
+		<a href="#" class="active">Home</a>
+		<a href="#">About Me</a>
+		<a href="#">Gallery</a>
+		<a href="#">Contact Me</a>
+	</div>
+
+	<div class="home">
+		<h1>Austin Maitland</h1>
+		<h2>Web Designer</h2>
+	</div>
+	
+	<div class="aboutme">
+	<p><b>Greetings.<br>My name is Austin Maitland and if you're reading this, I am hoping for employment under you. I have quite a bit of experience in different types of work due to my frequent undertaking of odd jobs. I am a student of Computer Science, allowing for deft computer and proper issue resolution skills. I am quite tenacious in my pursuit of the completion of tasks. This is due to my carnal need to finish a project once started, making it one of my greatest strengths and I have a wonderful ability to hyperfocus my attention at a moment's notice when tuning out surroundings.<br></b></p>
+	</div>
+
+	<div class="myimage">
+		<img src="images/1.jpg">
+		<img src="images/2.jpg">
+		<img src="images/3.jpg">
+		<img src="images/4.jpg">
+		<img src="images/5.jpg">
+		<img src="images/6.jpg">
+		<img src="images/7.jpg">
+		<img src="images/8.jpg">
+		<img src="images/9.jpg">
+	</div>
+
+	<div class="contactus">
+	<form method="post" action="">
+		<input type="text" name="" placeholder="Name" required="" value="">
+		<input type="text" name="" placeholder="Email" value="">
+		<textarea cols="8" rows="6" placeholder="Message"></textarea>
+		<input type="submit" name="" value="Submit">
+		</form>
+	</div>
+</div>
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+
+	$('a').click(function(){
+		var mythis = $(this);
+		$('a').removeClass('active');
+		$(mythis).addClass('active');
+	});
+
+	// ABOUT ME
+	$('a:nth-child(1)').click(function(){
+		$('.home').fadeIn('slow');
+	});
+	$('a:nth-child(2),a:nth-child(3),a:nth-child(4)').click(function(){
+		$('.home').fadeOut('fast')
+	});
+
+	// ABOUT ME
+	$('a:nth-child(2)').click(function(){
+		$('.aboutme').fadeIn('slow');
+	});
+	$('a:nth-child(1),a:nth-child(3),a:nth-child(4)').click(function(){
+		$('.aboutme').fadeOut('fast')
+	});
+
+	// GALLERY
+	$('a:nth-child(3)').click(function(){
+		$('.myimage').fadeIn('slow')
+	});
+	$('a:nth-child(1),a:nth-child(2),a:nth-child(4)').click(function(){
+		$('.myimage').fadeOut('fast')
+	});
+
+	// GALLERY
+	$('a:nth-child(4)').click(function(){
+		$('.contactus').fadeIn('slow')
+	});
+	$('a:nth-child(3),a:nth-child(2),a:nth-child(1)').click(function(){
+		$('.contactus').fadeOut('fast')
+	});
+});
+</script>
+</body>
+</html>
